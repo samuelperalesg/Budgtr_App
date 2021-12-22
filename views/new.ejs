@@ -4,13 +4,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
   <link rel="stylesheet" href="/public/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css and https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
-  <link rel="stylesheet" href="/normalize.css" />
-  <link rel="stylesheet" href="/skeleton.css" />
-  <title>Document</title>
+  <title>Budgtr New</title>
 </head>
 <body>
-  
+  <div class="container"></div>
+  <h1>New Budget</h1>
+
+  <form action="/budgets" method="POST">
+    <input type="text" name="date" placeholder="Date" />
+    <input type="text" name="name" placeholder="Name"/><br />
+    <input type="text" name="amount" placeholder="Amount"/>
+    <input type="text" name="from" placeholder="From"/>
+    <input type="text" name="tags" placeholder="Tags"/><br />
+    <input type="submit" value="Create Budget" />
+  </form>
+
 </body>
 </html>

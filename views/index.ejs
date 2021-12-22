@@ -4,29 +4,35 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
   <link rel="stylesheet" href="/public/style.css">
-  <link rel="stylesheet" href="/normalize.css" />
-  <link rel="stylesheet" href="/skeleton.css" />
-  <title>Document</title>
+  <title>Budtr Index</title>
 </head>
 <body>
-  <h1>Budgtr ALL</h1>
-  <div class="container">
-    <table style="text-transform: capitalize;">
+  <h1>Budgtr</h1>
+  <a href="/budgets/new"><button>NEW</button></a>
+  <div class="container"></div>
+  <table style="text-transform: capitalize;">
+    <% for(let i = 0; i < allBudgets.length; i++) { %>
       <tr>
-              <% for(let i = 0; i < allBudgets.length; i++) { %>
-                <a href="/budgets/<%= i %>">
-                    <%= allBudgets[i].name %>
-                </a>
-                <td>
-                  <a href="/budgets/<%= i %>">
-                    <%= allBudgets[i].date %>
-                  </a>
-                </td>
-            </tr>
-            
+        <td>
+          <%= allBudgets[i].date %>
+          </a>
+        </td>
+        <td>
+          <a href="/budgets/<%= i %>">
+          <%= allBudgets[i].name %>
+          </a>
+        </td>
+
+      <td>
+        <%= allBudgets[i].amount %>
+        </a>
+      </td>
+      
+    </tr>
         <% } %>
-    </table>
-  </div>
+  </table>
 </body>
 </html>
