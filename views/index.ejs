@@ -9,8 +9,14 @@
   <link rel="stylesheet" href="/public/style.css">
   <title>Budtr Index</title>
 </head>
+
+<% let bankAccount = null %>
+<% for (let i = 0; i < allBudgets.length; i++) { %>
+  <% bankAccount += parseInt(allBudgets[i].amount)} %>
+
 <body>
   <h1>Budgtr</h1>
+  <h2 style="<%= bankAccount < 0 ? 'color : red;' : 'color : green;' %>" >Total: $<%= bankAccount %>.00</h2>
   <a href="/budgets/new"><button>NEW</button></a>
   <div class="container"></div>
   <table style="text-transform: capitalize;">
